@@ -1,0 +1,16 @@
+<form>
+ 
+
+
+  <div class="form-group" style="display: inline-block;">
+    <timepicker [(ngModel)]="startTime" name="clock" [showMeridian]="ismeridian"></timepicker>
+    <pre class="alert alert-info">Time is: {{ startTime }}</pre>
+
+    <br> 
+  
+     <button type="button" class="btn btn-info" (click)="toggleMode()">12H / 24H</button>
+  </div> 
+ 
+</form>
+<br>
+<hr>

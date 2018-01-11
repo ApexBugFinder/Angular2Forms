@@ -1,0 +1,21 @@
+
+.has-error > label {
+    color: red;
+}
+.has-error > select {
+    border-color: red;
+    border-width: 2px;
+}
+.has-error > input {
+    border-color: red;
+    border-width: 2px;
+}
+.header {
+    font-size: 35px;
+    color: green;
+    width: 200px;
+}
+.navbar-item {
+    width: 150px;
+    display: inline-block;
+}

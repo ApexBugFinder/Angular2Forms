@@ -1,65 +1,43 @@
 <!--The content below is only a placeholder and can be replaced.-->
-
-<div class="container">
-  <h3>Angular 2 Forms</h3>
-
-  <form #form="ngForm" novalidate>
-    <div class="form-group">
-      <label>First Name</label>
-      <input type="text" required="required" name="firstName" class="form-control" [(ngModel)]="model.firstName">
+<!-- <h3 *ngIf='languages.length == 0'>Loading...</h3> -->
+<!-- <div class="container" *ngIf='languages.length > 0'> -->
+  <div class="container">
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <span><a class="navbar-brand header" href="#">Angular 2 Forms</a></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav navbar-item">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/forms']">Forms <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav navbar-item">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/date']">Date <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav navbar-item">
+        <li class="nav-item active">
+          <a class="nav-link"  [routerLink]="['/time']">Time <span class="sr-only">(current)</span></a>
+        </li>
+      </ul> 
+      <ul class="navbar-nav navbar-item">
+        <li class="nav-item active">
+          <a class="nav-link"  [routerLink]="['/buttons']">Buttons <span class="sr-only">(current)</span></a>
+        </li>
+      </ul> 
+      
     </div>
-
-    <div class="form-group">
-      <label>Last Name</label>
-      <input type="text" required="required" name="lastName" class="form-control"
-      [ngModel]="model.lastName" (ngModelChange)="lastNameToUpper($event)">
-    </div>
-
-<!-- 
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" name="is-full-time" ngModel> Full Time Employee
-      </label>
-    </div>
-    <label>Payment Type</label>
-    <div class="radio">
-      <label for="">
-        <input type="radio" name="pay-type" value="w2" checked="checked" ngModel>W2
-      </label>
-    </div>
-    <div class="radio">
-      <label for="">
-        <input type="radio" name="pay-type" value="1099" ngModel>1099
-      </label>
-    </div>
-
-    <div class="form-group">
-      <label>Primary Language</label>
-      <select name="" id="" class=form-control>
-        <option *ngFor="let lang of languages"> 
-          {{lang}}
-        </option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label>Date Hired</label>
-      <input type="date" class="form-control">
-    </div>
-
-
-    <!--- ****************************************************     -->
-    <button class="btn btn-primary" type="submit">Ok</button>  
-
-    <div>
-      Model : {{ model | json}}
-      <br>
-      Angular : {{ form.value | json }}
-      <br>
-      Is form pristine? : {{ form.pristine }}
-    </div>
-    
-  </form>
+  </nav>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+ 
+  
 </div>
 
  

@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
 import { Employee } from './models/employee.model';
+import { FormPoster } from './services/form-poster.service';
+import { NgForm } from '@angular/forms/src/directives/ng_form';
+import { DatepickerModule } from 'ng2-bootstrap/datepicker';
+import { DatepickerConfig } from 'ng2-bootstrap/datepicker/datepicker.config';
+import { TimepickerModule } from 'ngx-bootstrap/timepicker';
+import { TimepickerConfig } from 'ngx-bootstrap/timepicker/timepicker.config';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'obasi-root',
@@ -7,16 +14,9 @@ import { Employee } from './models/employee.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'obasi';
-  languages = ['English', 'Mandarin', 'Other'];
-  model = new Employee('Reina', 'Roberts');
 
-  lastNameToUpper(value: string) {
-    if (value.length > 0) {
-      this.model.lastName = value.charAt(0).toUpperCase() + value.slice(1);
-    } else {
-      this.model.lastName = value;
-    }
 
+  constructor() {
   }
+
 }
